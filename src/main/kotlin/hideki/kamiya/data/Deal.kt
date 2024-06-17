@@ -1,3 +1,9 @@
 package hideki.kamiya.data
 
-data class Deal()
+import kotlinx.serialization.Serializable
+
+@Serializable
+data class Deal(
+    val id: String,
+    val settlements: List<Settlement>
+)

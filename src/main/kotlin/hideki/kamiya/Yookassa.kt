@@ -1,44 +1,58 @@
 package hideki.kamiya
 
-object Yookassa {
+import hideki.kamiya.data.Amount
+import hideki.kamiya.data.Confirmation
+import hideki.kamiya.data.Payment
+import hideki.kamiya.data.PaymentMethod
 
-    fun createPayment() {
+class Yookassa(
+    private val shopId: Int,
+    private val secretToken: String
+) {
 
-    }
-
-    fun getPayment() {
-
-    }
-
-    fun getPayments() {
-
-    }
-
-    fun createRefund() {
-
-    }
-
-    fun getRefund() {
+    suspend fun createPayment(
+        amount: Amount,
+        confirmation: Confirmation,
+        capture: Boolean = false,
+        paymentMethod: PaymentMethod? = null,
+        metadata: Map<String, String>? = null
+    ): Payment {
 
     }
 
-    fun getRefunds() {
+    suspend fun getPayment(paymentId: String): Payment {
 
     }
 
-    fun createWebHook() {
+    suspend fun getPayments(): List<Payment> {
 
     }
 
-    fun deleteWebHook() {
+    suspend fun createRefund(paymentId: String, amount: Amount) {
 
     }
 
-    fun getWebHooks() {
+    suspend fun getRefund(refundId: String) {
 
     }
 
-    private fun parse() {
+    suspend fun getRefunds() {
+
+    }
+
+    suspend fun createWebHook() {
+
+    }
+
+    suspend fun deleteWebHook() {
+
+    }
+
+    suspend fun getWebHooks() {
+
+    }
+
+    private suspend fun parse() {
 
     }
 }

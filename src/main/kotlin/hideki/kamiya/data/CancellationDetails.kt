@@ -1,3 +1,9 @@
 package hideki.kamiya.data
 
-data class CancellationDetails()
+import kotlinx.serialization.Serializable
+
+@Serializable
+data class CancellationDetails(
+    val party: String,
+    val reason: String
+)

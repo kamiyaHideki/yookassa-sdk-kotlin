@@ -1,3 +1,9 @@
 package hideki.kamiya.data
 
-data class Settlement()
+import kotlinx.serialization.Serializable
+
+@Serializable
+data class Settlement(
+    val type: String,
+    val amount: Amount
+)

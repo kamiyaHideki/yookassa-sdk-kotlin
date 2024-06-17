@@ -1,3 +1,9 @@
 package hideki.kamiya.data
 
-data class ThreeDSecure()
+import kotlinx.serialization.SerialName
+import kotlinx.serialization.Serializable
+
+@Serializable
+data class ThreeDSecure(
+    val applied: Boolean
+)

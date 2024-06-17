@@ -1,3 +1,9 @@
 package hideki.kamiya.data
 
-data class Amount()
+import kotlinx.serialization.Serializable
+
+@Serializable
+data class Amount(
+    val value: String,
+    val currency: String
+)

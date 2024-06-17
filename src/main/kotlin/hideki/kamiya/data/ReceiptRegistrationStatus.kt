@@ -1,3 +1,10 @@
 package hideki.kamiya.data
 
-data class ReceiptRegistrationStatus()
+import kotlinx.serialization.Serializable
+
+
+enum class ReceiptRegistrationStatus(val value: String) {
+    PENDING("pending"),
+    SUCCEEDED("succeeded"),
+    CANCELED("canceled")
+}
