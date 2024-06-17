@@ -16,7 +16,7 @@ data class Payment(
     @SerialName("captured_at") val capturedAt: String? = null, // Todo("ISO 8601")
     @SerialName("created_at") val createdAt: String, // Todo("ISO 8601")
     @SerialName("expires_at") val expiresAt: String? = null, // Todo("ISO 8601")
-    val confirmation: Confirmation? = null,
+    val confirmation: PaymentConfirmation? = null,
     val test: Boolean,
     @SerialName("refunded_amount") val refundedAmount: Amount? = null,
     val paid: Boolean,

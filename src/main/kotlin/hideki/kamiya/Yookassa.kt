@@ -1,7 +1,7 @@
 package hideki.kamiya
 
 import hideki.kamiya.data.Amount
-import hideki.kamiya.data.Confirmation
+import hideki.kamiya.data.PaymentConfirmation
 import hideki.kamiya.data.Payment
 import hideki.kamiya.data.PaymentMethod
 import io.ktor.client.*
@@ -35,7 +35,7 @@ class Yookassa(
 
     suspend fun createPayment(
         amount: Amount,
-        confirmation: Confirmation,
+        confirmation: PaymentConfirmation,
         capture: Boolean = false,
         paymentMethod: PaymentMethod? = null,
         metadata: Map<String, String>? = null
