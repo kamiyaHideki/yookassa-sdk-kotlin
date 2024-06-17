@@ -7,7 +7,7 @@ import kotlinx.serialization.Serializable
 @Serializable
 data class Payment(
     val id: String, // Todo("UUID")
-    val status: Status,
+    val status: PaymentStatus,
     val amount: Amount,
     @SerialName("income_amount") val incomeAmount: Amount? = null,
     val description: String? = null,
